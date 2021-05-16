@@ -1,0 +1,73 @@
+Algoritmo "Carteira" //nome dado ao algoritmo
+
+Var  cdbs, acoes, fundosimob, stocks, reits, total, vcdbs : real
+vacoes, vfundosimob, vstocks, vreits, vtotal, vcdbsv, vtotalp : real
+
+Inicio
+
+   Repita
+
+      escreva ("Insira a porcentagem de ativos em CDBs:")
+      leia (cdbs) // Porcentagem desejada
+      escreva ("Quanto tem aplicado já neste ativo, ou digite 0 caso nao tenha:")
+      leia (vcdbs)// Valor em dinheiro
+
+      escreva ("Insira a porcentagem de ativos em Ações: ")
+      leia (acoes) // Porcentagem desejada
+      escreva ("Quanto tem aplicado já neste ativo, ou digite 0 caso nao tenha:")
+      leia (vacoes)// Valor em dinheiro
+   
+      escreva ("Insira a porcentagem de ativos em Fundos imobiliários:")
+      leia (fundosimob) // Porcentagem desejada
+      escreva ("Quanto tem aplicado já neste ativo, ou digite 0 caso nao tenha:")
+      leia (vfundosimob)// Valor em dinheiro
+   
+      escreva ("Insira a porcentagem de ativos em Stocks:")
+      leia (stocks) // Porcentagem desejada
+      escreva ("Quanto tem aplicado já neste ativo, ou digite 0 caso nao tenha:")
+      leia (vstocks)// Valor em dinheiro
+
+      escreva ("Insira a porcentagem de ativos em Reits:")
+      leia (reits) // Porcentagem desejada
+      escreva ("Quanto tem aplicado já neste ativo, ou digite 0 caso nao tenha:")
+      leia (vreits)// Valor em dinheiro
+   
+      total <- cdbs + acoes + fundosimob + stocks + reits
+      
+   se (total <> 100) entao
+   escreval ("ERRO, deve-se somar 100%! complete novamente!")
+   senão
+   escreval ("Sucesso! Dados armazenados")
+   fimse
+   
+   ate (total = 100)
+   
+   vtotal <- vcdbs + vacoes + vfundosimob + vstocks + vreits
+   //Atribui somando valor total de dinheiro a variavel (VTOTAL)
+   
+   escreval ("CDBs", cdbs, "%", " Porcentagem Atual ", (vcdbs/vtotal)*100, "%")
+   escreval ("Valor indicado de invetimento em CDBs R$", (cdbs/100)*vtotal)
+   
+   escreval ("Ações", acoes, "%", " Porcentagem Atual ", (vacoes/vtotal)*100, "%")
+   escreval ("Valor indicado de invetimento em açoes R$", (acoes/100)*vtotal)
+   
+   escreval ("Fundos Imob", fundosimob, "%", " Porcentagem Atual ", (vfundosimob/vtotal)*100, "%")
+   escreval ("Valor indicado de invetimento em fundos imob R$", (fundosimob/100)*vtotal)
+   
+   escreval ("Stocks", stocks, "%", " Porcentagem Atual ", (vstocks/vtotal)*100, "%")
+   escreval ("Valor indicado de invetimento em stocks R$", (stocks/100)*vtotal)
+   
+   escreval ("Reits", reits, "%", " Porcentagem Atual ", (vreits/vtotal)*100, "%")
+   escreval ("Valor indicado de invetimento em reits R$", (reits/100)*vtotal)
+   
+   escreval ("Valor total investido e R$", vtotal)
+   //Mostra na tela o valor total investido somado
+   
+
+   escreval ("A diferença é:", cdbs - (vcdbs/vtotal*100))
+   //Tentativa de saber a diferença
+   
+   
+
+
+Fimalgoritmo
